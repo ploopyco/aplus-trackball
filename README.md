@@ -20,4 +20,4 @@ Note that you may have to look for specific development branches in order to fin
 
 ## Under what license is this released?
 
-As per QMK's licensing requirements, the firmware for the Ploopy Bean Pointing Stick is released under GPLv3. Hardware design files, including electronics and mechanical files, are released under OHL CERN v2-S. Check the respective directories for full license text.
+As per QMK's licensing requirements, the firmware for the Ploopy A+ Trackball is released under GPLv3. Hardware design files, including electronics and mechanical files, are released under OHL CERN v2-S. Check the respective directories for full license text.
