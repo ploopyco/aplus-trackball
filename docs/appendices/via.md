@@ -91,3 +91,14 @@ Begin by copying and pasting the following into a text file, saving it as *aplus
 - Click *Authorize Device*. A modal window should pop up, and you should see the *Ploopy A+ Trackball* as an option to connect. Do so now.
 
 You should now see a representation of the buttons of the A+ in the web app. You are now free to modify the button's functionality.
+
+
+## Using VIA and VIAL on Linux
+
+Using VIA or VIAL with Ploopy devices on Linux requires modifying a few `udev` rules. If you have `sudo` access on your box, the following command will export the necessary `udev` rules and reload `udev`:
+
+> export USER_GID=`id -g`; sudo --preserve-env=USER_GID sh -c 'echo "KERNEL==\"hidraw*\", SUBSYSTEM==\"hidraw\", ATTRS{idVendor}==\"5043\", MODE=\"0660\", GROUP=\"$USER_GID\", TAG+=\"uaccess\"" > /etc/udev/rules.d/50-qmk-ploopy.rules && udevadm control --reload && udevadm trigger'
+
+As an alternative, you can use `qmk_udev` [here](https://github.com/qmk/qmk_udev) to perform automated `udev` access updates whenever compatible devices are plugged in.
+
+If you're looking for more specific advice on configuring `udev` with VIA and VIAL, see [VIAL's documentation on udev here](https://get.vial.today/manual/linux-udev.html#generalized-via-udev-rule). If you're using VIA, make sure that you follow the instructions allowing VIA devices, as the instructions for VIAL devices are more specific and will not work with VIA.
