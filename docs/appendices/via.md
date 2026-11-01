@@ -83,7 +83,9 @@ Begin by copying and pasting the following into a text file, saving it as *aplus
     }
 
 - Next, navigate to [the VIA web app](https://usevia.app), using **Microsoft Edge, Chrome, or Opera**. Any other browser that supports WebHID will work, too.
-- Look at the top toolbar of the web application, and click the tab called *DESIGN*.
+- Look at the top toolbar of the web application, and click the tab called *SETTINGS* (cog icon).
+- Turn on "Show Design Tab".
+- Look at the top toolbar of the web application, and click the tab called *DESIGN* (paint brush icon). 
 - Uncheck *Use V2 definitions (deprecated)*.
 - Click *Load* and upload the *aplus.json* file that you saved on your computer.
 - Plug in the A+ if it wasn't plugged in already.
