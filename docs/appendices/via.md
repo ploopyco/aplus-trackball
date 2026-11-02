@@ -95,7 +95,7 @@ You should now see a representation of the buttons of the A+ in the web app. You
 
 ## Using VIA and VIAL on Linux
 
-Using VIA or VIAL with Ploopy devices on Linux requires modifying a few `udev` rules. If you have `sudo` access on your box, the following command will export the necessary `udev` rules and reload `udev`:
+By default, Ploopy devices are compatible with VIA, but not VIAL. However, in both cases, using VIA or VIAL with Ploopy devices on Linux requires modifying a few `udev` rules. If you have `sudo` access on your box, the following command will export the necessary `udev` rules and reload `udev`:
 
 > export USER_GID=`id -g`; sudo --preserve-env=USER_GID sh -c 'echo "KERNEL==\"hidraw*\", SUBSYSTEM==\"hidraw\", ATTRS{idVendor}==\"5043\", MODE=\"0660\", GROUP=\"$USER_GID\", TAG+=\"uaccess\"" > /etc/udev/rules.d/50-qmk-ploopy.rules && udevadm control --reload && udevadm trigger'
 
